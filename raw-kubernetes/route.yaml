@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: person-service
+    app.kubernetes.io/component: person-service
+    app.kubernetes.io/instance: person-service
+  name: person-service
+  namespace: book-dev
+spec:
+  host: person-service-book-dev.apps.ocp4.local
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: person-service
+    weight: 100
+  wildcardPolicy: None

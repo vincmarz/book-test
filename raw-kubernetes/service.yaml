@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: person-service
+    app.kubernetes.io/component: person-service
+    app.kubernetes.io/instance: person-service
+  name: person-service
+  namespace: book-dev
+spec:
+  clusterIP: 172.30.132.141
+  clusterIPs:
+  - 172.30.132.141
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 8080-tcp
+    port: 8080
+  - name: 8443-tcp
+    port: 8443
+  - name: 8778-tcp
+    port: 8778
+  selector:
+    deployment: person-service

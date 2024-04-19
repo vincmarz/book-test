@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: postgresql-persistent
+    app.kubernetes.io/component: postgresql-persistent
+    app.kubernetes.io/instance: postgresql-persistent
+    template: postgresql-persistent-template
+  name: wanjaserver
+  namespace: book-dev
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: local-fs
+  volumeName: local-pv-24d8ba4e 

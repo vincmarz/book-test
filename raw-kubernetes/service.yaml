@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/component: person-service
     app.kubernetes.io/instance: person-service
   name: person-service
-  namespace: book-dev
+  namespace: book-test
 spec:
   clusterIP: 172.30.132.141
   clusterIPs:

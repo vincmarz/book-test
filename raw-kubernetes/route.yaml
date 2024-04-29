@@ -8,9 +8,9 @@ metadata:
     app.kubernetes.io/component: person-service
     app.kubernetes.io/instance: person-service
   name: person-service
-  namespace: book-dev
+  namespace: book-test
 spec:
-  host: person-service-book-dev.apps.ocp4.local
+  host: person-service-book-test.apps.ocp4.local
   port:
     targetPort: 8080-tcp
   to:

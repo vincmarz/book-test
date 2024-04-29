@@ -1,1 +1,0 @@
-image-registry.openshift-image-registry.svc:5000/book-dev/person-service@sha256:bc5caa417600c883dd084ec79b80d3b700c9c0f532b57a599eabeae0c0fc31a7
